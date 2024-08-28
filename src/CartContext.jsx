@@ -7,7 +7,7 @@ export const useCart = () => {
 };
 
 const fetchCartItems = async () => {
-    const response = await fetch('src/assets/products.json');
+    const response = await fetch('public/products.json');
     const data = await response.json();
    
     return data;
