@@ -7,7 +7,7 @@ export const useCart = () => {
 };
 
 const fetchCartItems = async () => {
-    const response = await fetch('public/products.json');
+    const response = await fetch("https://run.mocky.io/v3/f984cdbe-b94f-4035-89a6-a516d9247bce");
     const data = await response.json();
    
     return data;
@@ -44,9 +44,7 @@ export const CartProvider = ({ children }) => {
         setCartItems(prevItems => prevItems.filter(item => item.id !== id));
     };
 
-    // const totalQuantity = cartItems.reduce((acc, item) => acc + item.quantity, 0);
-    // const totalAmount = cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0);
-
+    
     return (
         <CartContext.Provider value={{ cartItems, updateQuantity, removeItem, totalQuantity, totalAmount }}>
             {children}
