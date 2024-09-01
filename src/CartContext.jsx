@@ -7,7 +7,7 @@ export const useCart = () => {
 };
 
 const fetchCartItems = async () => {
-    const response = await fetch("https://run.mocky.io/v3/f984cdbe-b94f-4035-89a6-a516d9247bce");
+    const response = await fetch("https://run.mocky.io/v3/278b4f1f-92d7-452f-8e0b-32f1d268deb7");
     const data = await response.json();
    
     return data;
